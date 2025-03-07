@@ -102,14 +102,14 @@ MakeExpression[SubscriptBox["I","\[Gamma]"],StandardForm]:=MakeExpression["GIden
 MakeBoxes[GIdentity,StandardForm]:=SubscriptBox["I","\[Gamma]"]
 
 
-AddInputAlias[NotationBoxTag[SubscriptBox["I","\[Gamma]"]],"ig",InputNotebook[]];
+(* AddInputAlias[NotationBoxTag[SubscriptBox["I","\[Gamma]"]],"ig",InputNotebook[]]; *)
 
 
 MakeExpression[SubscriptBox["\[Gamma]","5"],StandardForm]:=MakeExpression["Gamma5",StandardForm]
 MakeBoxes[Gamma5,StandardForm]:=SubscriptBox["\[Gamma]","5"]
 
 
-AddInputAlias[NotationBoxTag[SubscriptBox["\[Gamma]","5"]],"g5",InputNotebook[]];
+(* AddInputAlias[NotationBoxTag[SubscriptBox["\[Gamma]","5"]],"g5",InputNotebook[]]; *)
 
 
 TypeHierarchy[GLMatrix,GPMatrix];
@@ -253,7 +253,6 @@ gtrace[a_,b1_,bs__]:=Sum[(-1)^(i+1)*gtrace[a,{b1,bs}[[i]]]gtrace@@Delete[{b1,bs}
 
 
 (* ::Input:: *)
-(**)
 (*GTrace[x_Plus]:=GTrace/@x;*)
 (*GTrace[x_?(FreeQ[#,GMPat]&)*y_]:=x*GTrace[y];*)
 (*GTrace[GIdentity]=1;*)
